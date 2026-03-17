@@ -24,6 +24,7 @@ function getUserInput(): Promise<string> {
     });
 }
 
+
 function sendEmail(to: string, subject: string, body: string) {
     exec(`echo ${body} | mail -s "${subject}" ${to}`, (error, stdout, stderr) => {
         if (error) {
